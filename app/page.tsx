@@ -64,50 +64,21 @@
 //   );
 // }
 
-"use client";
-
-import Navigation from "@/components/Navigation";
-import Hero from "@/components/Hero";
-import InsightFlow from "@/components/InsightFlow";
-import Dashboard from "@/components/Dashboard";
-import WowMoment from "@/components/WowMoment";
-import { motion } from "framer-motion";
+import HeroSection from "@/components/sections/HeroSection";
+import InsightFlow from "@/components/sections/InsightFlow";
+import DashboardPreview from "@/components/sections/DashboardPreview";
+import Navbar from "@/components/ui/Navbar";
 
 export default function Home() {
   return (
-    <main className="bg-black text-white">
-      <Navigation />
-      <Hero />
+    <main className="min-h-screen bg-black text-white selection:bg-blue-500 selection:text-white">
+      <Navbar />
+      <HeroSection />
       <InsightFlow />
-      <WowMoment />
-      <Dashboard />
+      <DashboardPreview />
 
-      {/* Footer */}
-      <footer className="bg-black border-t border-white/10 py-12 px-6">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center"
-          >
-            <p className="text-gray-400 mb-4">
-              © 2024 Xai Intelligence Workspace. Built with precision.
-            </p>
-            <div className="flex gap-6 justify-center text-sm">
-              <a href="#" className="hover:text-blue-400 transition">
-                Privacy
-              </a>
-              <a href="#" className="hover:text-blue-400 transition">
-                Terms
-              </a>
-              <a href="#" className="hover:text-blue-400 transition">
-                GitHub
-              </a>
-            </div>
-          </motion.div>
-        </div>
+      <footer className="py-12 border-t border-zinc-900 bg-black text-center text-xs text-zinc-600 font-mono">
+        © {new Date().getFullYear()} Xai Technologies Inc. // Built for Raco AI Technical Assessment
       </footer>
     </main>
   );

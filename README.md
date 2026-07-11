@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Xai – Intelligence Workspace Prototype
 
-## Getting Started
+**Built for the Raco AI Frontend Engineering Technical Assessment**
 
-First, run the development server:
+### 🔗 Primary Deliverables
+- **Live Production Deployment:** [INSERT VERCEL LINK HERE]
+- **Video Walkthrough & Architecture Explanation:** [INSERT YOUTUBE / GOOGLE DRIVE LINK HERE]
+- **Public Figma Design System:** [INSERT FIGMA LINK HERE]
+- **Product Documentation:** Located in [docs/architecture.md](docs/architecture.md) and [Xai_Intelligence_Workspace_Architecture.pdf](Xai_Intelligence_Workspace_Architecture.pdf)
 
+---
+
+### 🛠️ Technology Stack & Animation Architecture
+- **Framework:** Next.js 16 (App Router), TypeScript, Tailwind CSS
+- **3D Graphics Engine:** Three.js / React Three Fiber (custom GPU-accelerated vertex interpolation for data morphing)
+- **Scroll Choreography:** GSAP + ScrollTrigger (sequential pipeline entrance animations)
+- **UI Micro-Interactions:** Framer Motion (dashboard tab transitions and motion polish)
+
+### 🎬 Walkthrough Notes
+A short explanation of the key animation and interaction decisions is required for submission. Record a 2–3 minute screen capture showing:
+1. the live website running,
+2. the hero morph toggle transforming the 3D data points,
+3. the GSAP pipeline cards animating into view,
+4. the dashboard tabs switching with Framer Motion transitions,
+5. a brief spoken explanation of the stack and design decisions.
+
+Upload the video to YouTube (Unlisted) or Google Drive (Anyone with link can view) and replace the placeholder link above.
+
+### 🧠 Key Animation & Math Decisions
+1. Parametric Data Morphing (The "WOW" Moment):
+   The Hero section renders a live computational canvas of 3,000 vertices. Target coordinates are calculated for a chaotic sphere and a multidimensional cubic lattice, then interpolated in the render loop with cubic easing.
+2. Scroll-Driven Choreography:
+   GSAP ScrollTrigger sequences the three-stage data pipeline as the user scrolls, creating tactile momentum without interrupting native browser scroll behavior.
+3. Restrained Executive UI:
+   Framer Motion manages calm tab transitions and responsive layout changes so the workspace feels immediate and technically polished.
+
+### 💻 Running Locally
 ```bash
+git clone https://github.com/yourusername/xai-intelligence-workspace.git
+cd xai-intelligence-workspace
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Open http://localhost:3000 to view the workspace.
