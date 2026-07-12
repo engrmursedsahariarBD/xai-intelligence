@@ -1,0 +1,15 @@
+{
+  "name": "Xai – Intelligence Workspace",
+  "short_name": "Xai",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#08090B",
+  "background_color": "#08090B",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
